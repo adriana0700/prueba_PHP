@@ -5,7 +5,12 @@ require_once 'conexion.php';
 $nombre = $_POST['nombre_tienda'];
 $fecha = $_POST['fecha'];
 
-$sql = 'INSERT INTO tienda(Nombre, FechaDeApertura) VALUES($nombre, $fecha)';
+var_dump($nombre, $fecha);
+exit();
+
+$sql = 'INSERT INTO tienda(Nombre, FechaDeApertura) VALUES(' . $nombre . ', ' . $fecha . ')';
+
+
 
 $respuesta = ejecutarConsulta($sql);
 
